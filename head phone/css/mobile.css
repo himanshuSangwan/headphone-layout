@@ -1,0 +1,36 @@
+@media (max-width: 815px) {
+  .header {
+    margin-left: 130px;
+  }
+  nav .left-side ul {
+    display: none;
+  }
+
+  nav .right-side {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    margin-left: 50px;
+  }
+  .info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fa-music,
+  .fa-bolt {
+    margin-top: 250px;
+  }
+  .fa-bluetooth-b,
+  .fa-headphones-alt {
+    margin-top: 100px;
+  }
+  .info-img {
+    grid-template-columns: 1fr;
+  }
+  .info-img .img1 img {
+    width: 60%;
+  }
+  .info-img .info1 {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headphone</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e22ddbf88f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="head">
+        <nav>
+            <div class="left-side">
+                <div class="logo">
+                    <i class="fas fa-headphones"></i>
+                    <span>Soundbeam</span>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Benefits</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="right-side">
+                <div></div>
+                <div class="right2">
+                    <i class="fas fa-user"></i>
+                    <a href="#">Log In</a>
+                    <button onclick="increment()">Order Now</button>
+                    <!-- <i class="fas fa-shopping-cart"></i> -->
+                    <div class="bag">
+                        <i class="fas fa-shopping-bag"></i>
+                        <p id="order">0</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="header">
+            <h2>Soundbeam ERD - 3083</h2>
+            <h1>Reinventing <br> Sound Experience</h1>
+            <button onclick="increment()" class="butn">Order Now</button>
+        </div>
+    </header>
+
+    <!-- info section -->
+    <div class="info">
+        <div class="info-container">
+            <i class="fas fa-music"></i>
+            <h3>High Quality <br> Sound</h3>
+            <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
+        </div>
+        <div class="info-container">
+            <i class="fab fa-bluetooth-b"></i>
+            <h3>Easy Wireless <br> Listening</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, laudantium!</p>
+        </div>
+        <div class="info-container">
+            <i class="fas fa-bolt"></i>
+            <h3>Longer Battery Life</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae minima officiis!</p>
+        </div>
+        <div class="info-container">
+            <i class="fas fa-headphones-alt"></i>
+            <h3>Sleek <br> Updated Design</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat quisquam minus aperiam.</p>
+        </div>
+    </div>
+
+    <!-- our brands -->
+    <section id="brand">
+        <div class="brands">
+            <h2>As featured on</h2>
+            <h3> <a href="#">Google</a></h3>
+            <h3> <a href="#">Tesla</a></h3>
+            <h3> <a href="#">Sangwan's</a></h3>
+            <h3> <a href="#">Reliance</a></h3>
+            <h3> <a href="#">Twiter</a></h3>
+        </div>
+    </section>
+
+    <!-- info with image -->
+    <div class="info-img">
+        <div class="img1">
+            <img src="images/headphone.webp" alt="headphone" width="488">
+        </div>
+        <div class="info1">
+            <h3>Music Like You've<br>Never Heard Before</h3>
+            <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.consectetur adipisicing elit. Aspernatur debitis reprehenderit asperiores laudantium optio facere.</p>
+            <button onclick="increment()"class="butn">Order Now</button>
+        </div>
+    </div>
+
+    <!-- slide show -->
+    <div class="slide-wraper">
+        <div class="slide slide-1">
+            <h3>Reviews</h3>
+            <p>Lorem ips Qurem iusto a fuga sint pariatur deserunt, ea non architecto earum odit quaerat eius laboriosam fugiat id?
+            </p>
+            <h4>Rahul</h4>
+        </div>
+        <div class="slide slide-2">
+            <h3>Reviews</h3>
+            <p>Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tempora debitis eveniet. sit am</p>
+            <h4>Himanshu</h4>
+        </div>
+        <div class="slide slide-3">
+            <h3>Reviews</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum suscipit, ut autem animi quia vero sed at? Voluptate?</p>
+            <h4>Sangwan</h4>
+        </div>
+    </div>
+
+
+    <!-- men bg image -->
+    <div class="men-img"></div>
+
+    <!-- footer -->
+    <footer>
+        <a href="#head">BACK TO TOP</a>
+    </footer>
+   
+    <script>
+        // for slide show
+        let slideIndex = 0;
+        sliding();
+        function sliding(){
+            let slide= document.querySelectorAll(".slide");
+            for(let i = 0; i < slide.length; i++){
+                slide[i].style.display = "none";
+            }
+            slideIndex++;
+            if(slideIndex>slide.length){slideIndex=1};
+            slide[slideIndex-1].style.display= "block";
+        }
+        setInterval(sliding, 4000);
+        orderNo=0;
+        function increment(){
+            orderNo++;
+            let order = document.getElementById("order");
+            order.innerHTML=orderNo;
+        }
+    </script>
+</body>
+
+</html>
